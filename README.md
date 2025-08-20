@@ -1,6 +1,3 @@
-# glpiplugin
-Glpi Plugin Development
-
 # User Asset Details (GLPI Plugin)
 
 A simple GLPI 10.x plugin that adds a page to list assets assigned to the logged-in user.
