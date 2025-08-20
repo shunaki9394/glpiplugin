@@ -1,0 +1,26 @@
+This build preserves all features from hello2stable and changes only the glue:
+
+1) setup.php
+   - Replaced with a known-good version that defines:
+       plugin_version_userassetdetail()
+       plugin_init_userassetdetail()
+       plugin_userassetdetail_install()
+       plugin_userassetdetail_uninstall()
+   - Explicitly requires inc/menuassets.class.php
+   - Sets CSRF flag and Assets menu hook for 'userassetdetail'
+   - Original setup.php saved as setup.php.orig
+
+2) inc/menuassets.class.php
+   - Class renamed to PluginUserassetdetailMenuAssets
+   - Path changed to /plugins/userassetdetail/front/hello.php
+   - WebDir changed to Plugin::getWebDir('userassetdetail')
+   - Original saved as inc/menuassets.class.php.orig
+
+3) Other PHP files
+   - Replaced '/plugins/hello/' with '/plugins/userassetdetail/'
+   - Replaced Plugin::getWebDir('hello') with Plugin::getWebDir('userassetdetail')
+   - Files changed: [
+  "inc/smenuhelpdesk.class.php"
+]
+
+Everything else is byte-for-byte from hello2stable.

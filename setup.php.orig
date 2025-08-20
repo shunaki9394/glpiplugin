@@ -1,0 +1,23 @@
+<?php
+require_once __DIR__ . '/hook.php';
+
+function plugin_init_hello() {
+   global $PLUGIN_HOOKS;
+   $PLUGIN_HOOKS['csrf_compliant']['hello'] = true;
+   $PLUGIN_HOOKS['menu_toadd']['hello'] = [ 'assets' => PluginHelloMenuAssets::class ];
+}
+
+function plugin_version_hello() {
+   return [
+      'name'         => 'Hello - My Assigned Assets',
+      'version'      => '1.6.6r-licfixAV',
+      'author'       => 'ChatGPT',
+      'license'      => 'MIT',
+      'requirements' => [
+         'glpi' => ['min' => '10.0.0', 'max' => '10.0.99']
+      ]
+   ];
+}
+
+function plugin_hello_check_prerequisites() { return true; }
+function plugin_hello_check_config($verbose = false) { return true; }
