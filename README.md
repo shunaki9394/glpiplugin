@@ -12,3 +12,6 @@ A simple GLPI 10.x plugin that adds a page to list assets assigned to the logged
 - **Version:** 1.1v
 - **Author:** Dev with ChatGPT (Concept from Tan Yeong Wei)
 - **License:** MIT
+
+Plugin Display:
+<img width="1907" height="882" alt="image" src="https://github.com/user-attachments/assets/87b11fb9-2c5f-454f-a2c7-f90faf38f728" />
